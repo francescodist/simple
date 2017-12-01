@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Testo Semplificato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p *ngFor="let c of testoSimple">
+    <span id="prova" *ngFor="let testo of c.contenuto; let i = index">
+      <!-- CREO DIV SOLO PER PAROLE EVIDENZIATE DAL SERVIZIO -->
+      <div  *ngIf="testo.evidenziata"
+            [ngClass]="testo"
+            (tap)="testo.definizione != null ? hideTip(i, testo) : null"
+            (press)="testo.definizione != null ? showTip(i, testo) : null"
+            (panright)="testo.semplificazione != null ? showSimple(i) : null"
+            (panleft)="testo.semplificazione != null ? hideSimple(i) : null">
+        <span class="testo" *ngIf="originale[i] === undefined ? true : originale[i]">{{testo.testo}}</span>
+        <span class="testo" *ngIf="simple[i]">{{testo.semplificazione}}</span>
+
+      </div>
+      <div *ngIf="def[i]" class="definizione-box">{{testo.definizione}}</div>
+      <!-- PER PAROLE NORMALI SEMPLICE SPAN PER MOSTRARE IN-LINE -->
+      <span class="testo" *ngIf="!testo.evidenziata">
+        {{testo.testo}}
+      </span>
+    </span>
+  </p>
+</ion-content>

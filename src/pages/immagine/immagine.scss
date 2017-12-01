@@ -1,0 +1,17 @@
+page-immagine {
+  .flex-container{
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .button-container{
+    border-style: solid;
+    border-radius: 0.5px;
+    border-color: lightgray;
+    border-radius: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}

@@ -14,3 +14,48 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.area-testo{
+  width: 100%;
+  min-height: 60vh;
+  resize: none;
+  padding: 10px;
+  margin: -10px;
+}
+
+.testo{
+  font-size: 25px;
+}
+
+.definizione{
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #488aff;
+}
+
+.definizione-box{
+  color: white;
+  background-color: #488aff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.semplificazione{
+  background-color: lightgray;
+}
+
+.evidenziata:active:hover{
+  color: white;
+  background-color: #488aff;
+}
+
+.evidenziata{
+  text-align: center;
+  padding: 5px;
+  
+}
+
+.tip{
+  color: white;
+  background-color: #488aff;
+}

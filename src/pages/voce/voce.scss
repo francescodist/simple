@@ -1,0 +1,13 @@
+page-voce {
+  .flex-container{
+    display: flex;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #micIcon{
+    font-size: 30vh;
+  }
+}

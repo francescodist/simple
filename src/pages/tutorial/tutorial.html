@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{titolo}} - Come funziona?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p class="par">
+      {{introduzione}}
+    </p>
+
+    <h1>Il testo semplificato</h1>
+    <p class="par">
+      Il testo elaborato mostrerà solo alcune parole evidenziate.
+      Quelle, sono parole <b>semplificate</b>, con cui sarà possibile
+      interagire come descritto di seguito:
+    </p>
+
+      <div class="semplificazione definizione evidenziata testo"
+            [ngClass]="tipClass"
+            (press)="pressed($event)"
+            (tap)="tapped($event)"
+            (panright)="dragRight($event)"
+            (panleft)="dragLeft($event)">
+        {{esempio}}
+      </div>
+
+    <div *ngIf="showTip" class="definizione-box">
+      Tappa la parola per farmi scomparire e continuare con il
+      tutorial!
+    </div>
+    <p *ngIf="parte1" class="par">
+      Le parole con un contorno blu contengono una definizione
+      dettagliata. Tieni premuta la parola "Esempio" qui sopra per
+      mostrarne la definizione.
+    </p>
+    <p *ngIf="parte2" class="par">
+      Ottimo! Le parole con sfondo grigio contengono una versione
+      semplificata. Posiziona il dito sulla parola "Esempio" e trascinala
+      verso destra per mostrare la sua versione semplificata.
+    </p>
+    <p *ngIf="parte3" class="par">
+      Bene! Per far tornare una parola semplificata alla sua versione
+      originale, posiziona il dito su di essa e trascinala verso
+      sinistra.
+    </p>
+    <p *ngIf="parte4" class="par">
+      Perfetto! Ora puoi cominciare ad utilizzare il servizio.
+      Clicca "Avanti" e ricorda che le parole possono contenere
+      contemporaneamente una definizione e una versione semplificata.
+    </p>
+    <button ion-button full (click)="goToSimple()">
+      Avanti
+    </button>
+</ion-content>

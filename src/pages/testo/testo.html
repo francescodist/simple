@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Testo</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="mostraEsempi($event)" class="menu-button">
+        Esempi
+      </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <textarea [(ngModel)]="testo" class="area-testo"></textarea>
+  </ion-item>
+
+
+  <button ion-button full (click)="semplifica()">
+    Semplifica!
+  </button>
+
+
+
+
+</ion-content>
